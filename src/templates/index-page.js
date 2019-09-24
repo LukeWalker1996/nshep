@@ -45,8 +45,6 @@ export const IndexPageTemplate = ({
     <section
       className="section"
       style={{
-        boxShadow:
-          "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
         backgroundColor: "#038d9f",
         color: "white",
         lineHeight: "1",

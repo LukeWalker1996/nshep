@@ -44,16 +44,7 @@ const Footer = class extends React.Component {
                         About
                       </Link>
                     </li>
-                    <li>
-                      <Link className="navbar-item" to="/products">
-                        Products
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/contact/examples">
-                        Form Examples
-                      </Link>
-                    </li>
+
                     <li>
                       <a
                         className="navbar-item"
@@ -70,6 +61,11 @@ const Footer = class extends React.Component {
               <div className="column is-4">
                 <section>
                   <ul className="menu-list">
+                  <li>
+                      <Link className="navbar-item" to="/members">
+                        Members
+                      </Link>
+                    </li>
                     <li>
                       <Link className="navbar-item" to="/blog">
                         Latest Stories
@@ -83,8 +79,8 @@ const Footer = class extends React.Component {
                   </ul>
                 </section>
               </div>
-              <div className="column is-4 social">
-                <a title="facebook" href="https://facebook.com">
+              <div style={{verticalAlign:'bottom'}} className="column is-4 social">
+                {/* <a title="facebook" href="https://facebook.com">
                   <img
                     src={facebook}
                     alt="Facebook"
@@ -112,7 +108,7 @@ const Footer = class extends React.Component {
                     alt="Vimeo"
                     style={{ width: "1em", height: "1em" }}
                   />
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
