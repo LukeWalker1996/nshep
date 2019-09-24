@@ -1,9 +1,12 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
-image: /img/home-jumbotron.jpg
-heading: National Student Housing Excellence Partnership
-subheading: Support sustainable farming while enjoying a cup
+title: NATIONAL STUDENT HOUSING EXCELLENCE PARTNERSHIP
+image: /img/cropped-life-in-newcastle-mastheadgrid2.jpg
+heading: Great coffee with a conscience
+subheading: >-
+  Managing, Developing and Investing in over 15,000 student and co-living bed
+  spaces in the UK. Benchmarking the highest industry standard for student and
+  co-living HMO and Purpose Built accommodation.
 mainpitch:
   title: Why Kaldi
   description: >
@@ -68,3 +71,4 @@ main:
     alt: Coffee beans
     image: /img/products-grid1.jpg
 ---
+
