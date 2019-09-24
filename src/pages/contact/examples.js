@@ -4,6 +4,19 @@ import Layout from '../../components/Layout'
 
 export default class Index extends React.Component {
   render() {
+
+    return (
+      <Layout>
+        <div style={{height: '100vh'}}>
+          <section className="section">
+            <div className="container">
+            <h1 className="title">404</h1>
+            </div>
+          </section>
+          
+        </div>
+      </Layout>
+    )
     return (
       <Layout>
         <section className="section">

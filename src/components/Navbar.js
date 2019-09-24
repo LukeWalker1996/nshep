@@ -47,7 +47,7 @@ const Navbar = class extends React.Component {
         >
           <div className="">
             <div className="container">
-              <h1 className="">
+              <h1 style={{textAlign:'center'}}>
                 NATIONAL STUDENT HOUSING EXCELLENCE PARTNERSHIP
               </h1>
             </div>
