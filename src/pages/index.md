@@ -20,12 +20,12 @@ main:
   description: ' '
   image1:
     alt: ' '
-    image: /img/products-grid3.jpg
+    image: /img/hero-img.jpg
   image2:
     alt: ' '
-    image: /img/products-grid2.jpg
+    image: /img/birds-eye-view-hero.jpg
   image3:
     alt: ' '
-    image: /img/products-grid1.jpg
+    image: /img/durham-hero-alt.jpg
 ---
 
