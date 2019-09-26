@@ -1,5 +1,5 @@
 ---
-templateKey: member-page
+templateKey: associate-member-page
 title: CARLAIN PROPERTY
 description: >-
   Based in Cheltenham and Gloucester
