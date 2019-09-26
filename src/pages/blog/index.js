@@ -25,10 +25,10 @@ export default class BlogIndexPage extends React.Component {
             <h1 className="has-text-weight-bold is-size-1">Latest Stories</h1>
           </div>
         </div>
-        <section className="section">
+        <section style={{background:'#f3f3f3'}} className="section">
           <div className="container">
             <div className="content">
-              <BlogRoll />
+              <BlogRoll limit={null}/>
             </div>
           </div>
         </section>

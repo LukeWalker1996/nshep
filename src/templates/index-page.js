@@ -16,7 +16,7 @@ export const IndexPageTemplate = ({
   description,
   intro
 }) => (
-  <div>
+  <div style={{background: '#f3f3f3'}}>
     
     <div
       className="full-width-image margin-top-0"
@@ -24,8 +24,10 @@ export const IndexPageTemplate = ({
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`
+        backgroundPosition: `top left right bottom`,
+        backgroundAttachment: ``,
+        backgroundSize:'cover',
+        backgroundRepeat:'no-repeat'
       }}
     >
       <div
@@ -97,7 +99,7 @@ export const IndexPageTemplate = ({
                   <h3 className="has-text-weight-semibold is-size-2">
                     Recent Posts
                   </h3>
-                  <BlogRoll />
+                  <BlogRoll limit={4} />
                   <div className="column is-12 has-text-centered">
                     <Link className="btn" to="/blog">
                       Read more
@@ -173,16 +175,7 @@ export const pageQuery = graphql`
         }
         description
         intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
+
           heading
           description
         }

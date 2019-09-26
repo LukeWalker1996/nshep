@@ -1,14 +1,103 @@
 @import "~bulma/sass/utilities/initial-variables"
-
+@import url('https://fonts.googleapis.com/css?family=Manjari&display=swap')
 // Config vars
 // Kaldi logo brand color: #FD461E
-$kaldi-red: #D64000
+$kaldi-red: #f38148
 $kaldi-red-invert: #fff
 
-$primary: $kaldi-red
+$primary: #f38148
+$secondary: #038d9f;
 $primary-invert: $kaldi-red-invert
 $body-color: #333
 $black: #2b2523
+
+html 
+  font-family: 'Manjari', sans-serif
+form
+  font-family: 'Manjari', sans-serif
+body
+  font-family: 'Manjari', sans-serif
+nav 
+  font-family: 'Manjari', sans-serif
+div
+  font-family: 'Manjari', sans-serif!important
+h1 h2 h3 h4 h5 h6 h7
+  font-family: 'Manjari', sans-serif!important
+
+.contact-form
+  background: white
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
+  border-radius: 12px
+  position: relative
+  .bottom-o
+    vertical-align: bottom
+    position: absolute
+    bottom: 0
+  input
+    border: 2px solid #e3e3e3
+  textarea
+    border: 2px solid #e3e3e3
+  form 
+    padding: 30px!important
+  .right-col
+    padding: 30px!important
+    background: $secondary
+    border-top-right-radius: 12px
+    border-bottom-right-radius: 12px
+    img
+      width: 250px
+      margin-left: calc(50% - 125px)
+      margin-top: 50px!important
+
+
+.card
+  height: 100%
+.card-content
+  overflow: hidden!important
+
+.blog-post-card
+  background: white!important
+  border-radius: 12px!important
+  border: none!important
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)!important
+  margin-bottom: 20px
+
+
+.blog-card
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)!important
+  border-radius: 14px!important
+  overflow: hidden!important
+  background: white!important
+  h3 
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+  p 
+    color: darken(#e3e3e3, 15%)!important
+
+.members-card 
+  padding: 20px
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)!important
+  border-radius: 14px!important
+  background: white!important
+  .rounded-img
+    width: 100px
+    height: 100px
+    overflow: hidden
+    border-radius: 50%
+    border: 3px solid #038d9f
+    display: inline-block!important
+  .members-card-content
+    vertical-align: top
+    padding-left: 10px
+    width: calc(100% - 100px)
+    min-height: 100px
+    p
+      color: darken(#a3a3a3, 10%)
+    h3
+      font-size: 22px
+      font-weight: 700
+      color: black
 
 .navbar .navbar-menu
   box-shadow:none !important
@@ -24,9 +113,12 @@ $black: #2b2523
   justify-content: left
   align-items: center
   li
-    padding: 0 2rem 1rem 0
+    padding: 0.8rem
     margin-bottom: 1.5rem
     margin-top: 0
+    background: #e3e3e3
+    text-align: center!important
+    border-radius: 30px
 
 // Helper Classes
 .full-width-image-container
@@ -35,8 +127,8 @@ $black: #2b2523
   position: relative
   left: 50%
   right: 50%
-  margin: 2em -50vw
-  background-size: cover
+  margin: 0em -50vw
+  background-size: cont
   background-position: bottom
   display: flex
   justify-content: center
@@ -61,12 +153,13 @@ $black: #2b2523
     border-radius: .25rem
     text-decoration: none
     font-weight: 700
-    color: #CC3700
+    color: $secondary
     text-align: center
-    -webkit-box-shadow: inset 0 0 0 2px #CC3700
-    box-shadow: inset 0 0 0 2px #f40
+    -webkit-box-shadow: inset 0 0 0 2px $secondary
+    box-shadow: inset 0 0 0 2px $secondary
     -webkit-transition: all .15s ease
     transition: all .15s ease
+    border-color: $secondary!important
 
 .margin-top-0
   margin-top: 0 !important

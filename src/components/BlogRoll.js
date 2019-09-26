@@ -1,17 +1,20 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link, graphql, StaticQuery } from 'gatsby'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
+import React from "react";
+import PropTypes from "prop-types";
+import { Link, graphql, StaticQuery } from "gatsby";
+import PreviewCompatibleImage from "./PreviewCompatibleImage";
 
 class BlogRoll extends React.Component {
+  constructor(props){
+    super(props)
+  }
   render() {
-    const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
+    const { data, limit=null } = this.props;
+    const { edges: posts } = data.allMarkdownRemark;
 
-    return (
+    return limit == null ? (
       <div className="columns is-multiline">
         {posts &&
-          posts.map(({ node: post }) => (
+          posts.map(({ node: post }, i) => (
             // <div className="is-parent column is-6" key={post.id}>
             //   <article
             //     className={`blog-list-item tile is-child box notification ${
@@ -55,11 +58,85 @@ class BlogRoll extends React.Component {
             //   </article>
             // </div>
             <div className="is-parent column is-6" key={post.id}>
-              <h3>{post.frontmatter.title}</h3>
-              <p>{post.excerpt.substring(0, 100)}<Link to={post.fields.slug}>...Continue Reading</Link></p>
+              <div className="card blog-card">
+                <div className="card-content">
+                  <h3>{post.frontmatter.title}</h3>
+                  <p>
+                    {post.excerpt.substring(0, 100)}..
+                    <div style={{textAlign:'right'}}>
+                      <Link className="button is-primary" to={post.fields.slug}>
+                        Continue Reading
+                      </Link>
+                    </div>
+                  </p>
+                </div>
+              </div>
             </div>
           ))}
       </div>
+    ) : (
+      <div className="columns is-multiline">
+      {posts &&
+        posts.splice(0, limit).map(({ node: post }, i) => (
+          // <div className="is-parent column is-6" key={post.id}>
+          //   <article
+          //     className={`blog-list-item tile is-child box notification ${
+          //       post.frontmatter.featuredpost ? 'is-featured' : ''
+          //     }`}
+          //   >
+          //     <header>
+          //       {post.frontmatter.featuredimage ? (
+          //         <div className="featured-thumbnail">
+          //           <PreviewCompatibleImage
+          //             imageInfo={{
+          //               image: post.frontmatter.featuredimage,
+          //               alt: `featured image thumbnail for post ${
+          //                 post.title
+          //               }`,
+          //             }}
+          //           />
+          //         </div>
+          //       ) : null}
+          //       <p className="post-meta">
+          //         <Link
+          //           className="title has-text-primary is-size-4"
+          //           to={post.fields.slug}
+          //         >
+          //           {post.frontmatter.title}
+          //         </Link>
+          //         <span> &bull; </span>
+          //         <span className="subtitle is-size-5 is-block">
+          //           {post.frontmatter.date}
+          //         </span>
+          //       </p>
+          //     </header>
+          //     <p>
+          //       {post.excerpt}
+          //       <br />
+          //       <br />
+          //       <Link className="button" to={post.fields.slug}>
+          //         Keep Reading →
+          //       </Link>
+          //     </p>
+          //   </article>
+          // </div>
+          <div className="is-parent column is-6" key={post.id}>
+            <div className="card blog-card">
+              <div className="card-content">
+                <h3>{post.frontmatter.title}</h3>
+                <p>
+                  {post.excerpt.substring(0, 100)}..
+                  <div style={{textAlign:'right'}}>
+                    <Link className="button is-primary" to={post.fields.slug}>
+                      Continue Reading
+                    </Link>
+                  </div>
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
+    </div>
     )
   }
 }
@@ -67,10 +144,10 @@ class BlogRoll extends React.Component {
 BlogRoll.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array,
-    }),
-  }),
-}
+      edges: PropTypes.array
+    })
+  })
+};
 
 export default () => (
   <StaticQuery
@@ -107,4 +184,4 @@ export default () => (
     `}
     render={(data, count) => <BlogRoll data={data} count={count} />}
   />
-)
+);

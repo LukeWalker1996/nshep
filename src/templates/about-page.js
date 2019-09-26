@@ -4,35 +4,51 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 //import TwitterWall from '../components/twitter-wall'
-import { TwitterTimelineEmbed } from "react-twitter-embed";
-import MembersRoll from '../components/MembersRoll';
+import { TwitterTimelineEmbed, TwitterFollowButton } from "react-twitter-embed";
+import MembersRoll from "../components/MembersRoll";
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content;
 
   return (
-    <section className="section section--gradient">
+    <section
+      style={{ background: "#f3f3f3" }}
+      className="section section--gradient"
+    >
       <div className="container">
         <div className="columns">
-          <div className="column">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-              <PageContent className="content" content={content} />
-              <h3 className="subtitle">Founding Members</h3>
-              <MembersRoll type={12} />
+          <div className="column is-10 is-offset-1">
+            <div className="columns">
+              <div className="column is-7">
+                <div className="section">
+                  <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
+                    {title}
+                  </h2>
+                  <div className="card blog-post-card">
+                    <div className="card-content">
+                      <PageContent content={content} />
+                    </div>
+                  </div>
+                  <h3 className="title">Founding Members</h3>
+                  <MembersRoll type={12} style={2} />
+                </div>
+              </div>
+              <div className="column">
+                <div className="section">
+                  <h3 className="title">Twitter</h3>
+                  <div className="card blog-post-card">
+                    <div className="card-content">
+                      <TwitterFollowButton screenName="NSHEP10" />
+                      <TwitterTimelineEmbed
+                        sourceType="profile"
+                        screenName="NSHEP10"
+                        options={{ height: 400 }}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="column">
-            <div className="section">
-            <TwitterTimelineEmbed
-              sourceType="profile"
-              screenName="NSHEP10"
-              options={{ height: 400 }}
-            />
-            </div>
-            
           </div>
         </div>
       </div>

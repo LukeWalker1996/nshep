@@ -7,11 +7,11 @@ class MembersRoll extends React.Component {
   render() {
     const { data } = this.props;
     const { edges: Members } = data.allMarkdownRemark;
-    const { type = 6 } = this.props;
+    const { type = 6, style } = this.props;
     //types = 6 or 12
     console.log("possst");
     console.log(Members);
-    return (
+    return style == 1 ? (
       <div className="columns is-multiline">
         {Members &&
           Members.map(({ node: Member }) => (
@@ -80,6 +80,37 @@ class MembersRoll extends React.Component {
 
                     <div style={{ textAlign: "center" }}>
                       <h3>{Member.frontmatter.title}</h3>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          ))}
+      </div>
+    ) : (
+      <div className="columns is-multiline">
+        {Members &&
+          Members.map(({ node: Member }) => (
+            <div className={`is-parent column is-12`} key={Member.id}>
+              <Link to={Member.fields.slug}>
+                <div className="members-card">
+                  <div className="rounded-img">
+                    <PreviewCompatibleImage
+                      imageInfo={{
+                        image: Member.frontmatter.image,
+                        alt: `featured image thumbnail for Member ${Member.title}`
+                      }}
+                    />
+                  </div>
+
+                  <div
+                    className="members-card-content"
+                    style={{ display: "inline-block" }}
+                  >
+                    <h3>{Member.frontmatter.title}</h3>
+                    <p>{Member.frontmatter.description.slice(0, 75)}...</p>
+                    <div style={{ textAlign: "right"}}>
+                      <button className="button is-primary">View Member</button>
                     </div>
                   </div>
                 </div>
