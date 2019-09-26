@@ -1,5 +1,5 @@
 ---
-templateKey: member-page
+templateKey: associate-member-page
 title: WALTON ROBINSON
 description: >-
   Based in Newcastle: [www.waltonrobinson.com ](www.waltonrobinson.com)
