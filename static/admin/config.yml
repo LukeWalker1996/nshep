@@ -38,7 +38,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "string", default: "associate-member-page"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "associate-member-page"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "markdown"}
       - {label: "Image", name: "image", widget: image}

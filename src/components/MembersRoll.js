@@ -9,8 +9,7 @@ class MembersRoll extends React.Component {
     const { edges: Members } = data.allMarkdownRemark;
     const { type = 6, style } = this.props;
     //types = 6 or 12
-    console.log("possst");
-    console.log(Members);
+
     return style == 1 ? (
       <div className="columns is-multiline">
         {Members &&

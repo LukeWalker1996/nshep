@@ -6,12 +6,12 @@ import AssociateMembersRoll from '../../components/AssociateMembersRoll';
 const AssociateMembers = () => {
   return (
     <Layout>
-      <section className="section">
+      <section style={{background:'#f3f3f3'}} className="section">
         <div className="container">
           <div className="content">
             <div className="columns">
               <div className="column is-10 is-offset-1">
-                <h1 className="title">Members</h1>
+                <h1 className="title">Associate Members</h1>
                 <AssociateMembersRoll type={3} />
               </div>
             </div>

@@ -6,6 +6,7 @@ import Content, { HTMLContent } from "../components/Content";
 //import TwitterWall from '../components/twitter-wall'
 import { TwitterTimelineEmbed, TwitterFollowButton } from "react-twitter-embed";
 import MembersRoll from "../components/MembersRoll";
+import AssociateMembersRoll from "../components/AssociateMembersRoll";
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content;
@@ -31,6 +32,8 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
                   </div>
                   <h3 className="title">Founding Members</h3>
                   <MembersRoll type={12} style={2} />
+                  <h3 className="title">Associate Members</h3>
+                  <AssociateMembersRoll type={12} style={2} />
                 </div>
               </div>
               <div className="column">
