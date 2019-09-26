@@ -1,5 +1,5 @@
 ---
-templateKey: member-page
+templateKey: associate-member-page
 title: SUGARHOUSE PROPERTIES
 description: >-
   Based in Headingley, Leeds
