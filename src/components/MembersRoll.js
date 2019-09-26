@@ -109,8 +109,8 @@ class MembersRoll extends React.Component {
                   >
                     <h3>{Member.frontmatter.title}</h3>
                     <p>{Member.frontmatter.description.slice(0, 75)}...</p>
-                    <div style={{ textAlign: "right"}}>
-                      <button className="button is-primary">View Member</button>
+                    <div style={{ textAlign: "right" }}>
+                      <button className="blog-btn">VIEW</button>
                     </div>
                   </div>
                 </div>

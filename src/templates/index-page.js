@@ -4,8 +4,8 @@ import { Link, graphql } from "gatsby";
 
 import Layout from "../components/Layout";
 import Features from "../components/Features";
-import BlogRoll from "../components/BlogRoll";
-import { theme } from "../templates/theme";
+import RecentBlogRoll from "../components/RecentBlogRoll";
+import theme from "../templates/theme";
 
 export const IndexPageTemplate = ({
   image,
@@ -26,9 +26,11 @@ export const IndexPageTemplate = ({
         backgroundPosition: `top left right bottom`,
         backgroundAttachment: ``,
         backgroundSize: "cover",
-        backgroundRepeat: "no-repeat"
+        backgroundRepeat: "no-repeat",
+        color: 'white'
       }}
     >
+      <h2 style={{verticalAlign: 'middle', margin: 0, background: theme.primary, color: 'white', padding: '20px', fontSize: '46px'}}className="title">{mainpitch.title}</h2>
       <div
         style={{
           display: "flex",
@@ -69,9 +71,6 @@ export const IndexPageTemplate = ({
               <div className="content">
                 <div className="content">
                   <div className="tile">
-                    <h1 className="title">{mainpitch.title}</h1>
-                  </div>
-                  <div className="tile">
                     <h3 className="subtitle">{mainpitch.description}</h3>
                   </div>
                 </div>
@@ -86,7 +85,7 @@ export const IndexPageTemplate = ({
                     <h3 className="has-text-weight-semibold is-size-2">
                       Recent Posts
                     </h3>
-                    <BlogRoll limit={4} />
+                    <RecentBlogRoll limit={4} />
                     <div className="column is-12 has-text-centered">
                       <Link className="btn" to="/blog">
                         Read more

@@ -12,7 +12,7 @@ const Members = () => {
             <div className="columns">
               <div className="column is-10 is-offset-1">
                 <h1 className="title">Members</h1>
-                <MembersRoll />
+                <MembersRoll type={3} />
               </div>
             </div>
           </div>

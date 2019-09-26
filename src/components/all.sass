@@ -24,6 +24,9 @@ div
 h1 h2 h3 h4 h5 h6 h7
   font-family: 'Manjari', sans-serif!important
 
+
+
+
 .contact-form
   background: white
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
@@ -62,6 +65,99 @@ h1 h2 h3 h4 h5 h6 h7
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)!important
   margin-bottom: 20px
 
+.blog-btn
+  background: $secondary
+  padding: 10px
+  color: white
+  border-radius: 10px
+  vertical-align: bottom
+  display: block
+  width: 100px
+  text-align: center
+  margin-left: calc(100% - 100px)
+  margin-top: 10px
+  font-weight: 700
+  transition: all .5s ease-in-out
+  font-family: 'Manjari', sans-serif!important
+
+
+  &:hover
+    background: lighten($secondary, 5%)
+    color: white!important
+
+.site-search-btn 
+  border: 1px solid #e3e3e3
+  border-radius: 50%
+  display: block
+  color: white
+  height: 32px
+  width: 32px
+  text-align: center
+  padding-top: 6px
+  background: $secondary
+  @media screen and (max-width: 1024px)
+    display: none
+
+.site-search-box
+  border-top: 1px solid #e3e3e3
+  border-bottom: 1px solid #e3e3e3
+  border-right: 1px solid #e3e3e3
+  border-left: 0!important
+  border-top-right-radius: 20px
+  border-bottom-right-radius: 20px
+  height: 32px
+  width: 140px
+  margin-left: -14px
+  @media screen and (max-width: 1024px)
+    display: none
+  
+  input 
+     vertical-align: bottom
+     height: 30px
+     margin-left: 16px
+     border: 0!important
+     outline: 0!important
+     width: calc(140px - 12px)
+     background: transparent
+     font-family: 'Manjari', sans-serif!important
+
+.site-search-btn-large
+  border: 1px solid #e3e3e3
+  border-radius: 50%
+  display: block
+  color: white
+  height: 64px
+  width: 64px
+  text-align: center
+  padding-top: 16px
+  background: $secondary
+  position: relative
+
+ 
+
+.site-search-box-large
+  border-top: 1px solid #e3e3e3
+  border-bottom: 1px solid #e3e3e3
+  border-right: 1px solid #e3e3e3
+  border-left: 0!important
+  border-top-right-radius: 20px
+  border-bottom-right-radius: 20px
+  height: 64px
+  width: 100%
+  margin-left: -28px
+  display: inline-block
+  background: white
+  
+  input 
+     vertical-align: bottom
+     height: 60px
+     font-size: 30px
+     margin-left: 32px
+     border: 0!important
+     outline: 0!important
+     width: calc(100% - 12px)
+     background: transparent
+     font-family: 'Manjari', sans-serif!important
 
 .blog-card
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)!important
@@ -72,8 +168,14 @@ h1 h2 h3 h4 h5 h6 h7
     white-space: nowrap
     overflow: hidden
     text-overflow: ellipsis
+    -webkit-line-clamp: 3
+    -webkit-box-orient: vertical
   p 
     color: darken(#e3e3e3, 15%)!important
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+ 
 
 .members-card 
   padding: 20px
@@ -89,11 +191,19 @@ h1 h2 h3 h4 h5 h6 h7
     display: inline-block!important
   .members-card-content
     vertical-align: top
-    padding-left: 10px
+    padding-left: 20px
     width: calc(100% - 100px)
     min-height: 100px
     p
       color: darken(#a3a3a3, 10%)
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+      -webkit-line-clamp: 3
+      -webkit-box-orient: vertical
+      height: 30px
+      margin-bottom: 10px
+      
     h3
       font-size: 22px
       font-weight: 700

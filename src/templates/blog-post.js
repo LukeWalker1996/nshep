@@ -6,7 +6,7 @@ import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import { TwitterFollowButton, TwitterShareButton } from "react-twitter-embed";
-import { FacebookShareButton, EmailShareButton } from 'react-share';
+import { FacebookShareButton, EmailShareButton } from "react-share";
 export const BlogPostTemplate = ({
   content,
   contentComponent,
@@ -33,8 +33,8 @@ export const BlogPostTemplate = ({
 <span>
   <TwitterShareButton screenName="NSHEP10" />
 </span> */}
-<EmailShareButton subject={title} body={content} />
-<FacebookShareButton url={`www.innovateweb.co.uk`} />
+                <EmailShareButton subject={title} body={content} />
+                <FacebookShareButton url={`www.innovateweb.co.uk`} />
 
                 <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
                   {title}
@@ -46,7 +46,7 @@ export const BlogPostTemplate = ({
                     <h4>Tags</h4>
                     <ul className="taglist">
                       {tags.map(tag => (
-                        <li key={tag + `tag`}>
+                        <li style={{marginRight: 5}} key={tag + `tag`}>
                           <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
                         </li>
                       ))}

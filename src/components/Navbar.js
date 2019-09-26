@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 import github from "../img/github-icon.svg";
 import logo from "../img/nshep-logo-icon.png";
 import theme from "../templates/theme";
+import { FaSearch } from "react-icons/fa";
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -47,7 +48,7 @@ const Navbar = class extends React.Component {
         >
           <div className="">
             <div className="container">
-              <h1 style={{textAlign:'center'}}>
+              <h1 style={{ textAlign: "center" }}>
                 NATIONAL STUDENT HOUSING EXCELLENCE PARTNERSHIP
               </h1>
             </div>
@@ -94,6 +95,16 @@ const Navbar = class extends React.Component {
                 <Link className="navbar-item" to="/contact/examples">
                   Form Examples
                 </Link> */}
+                <Link to="search">
+                  <div className="navbar-item">
+                    <div className="site-search-btn">
+                      <FaSearch />
+                    </div>
+                    <div className="site-search-box">
+                      <input id="search-input" type="text" />
+                    </div>
+                  </div>
+                </Link>
               </div>
               <div className="navbar-end has-text-centered">
                 <Link className="navbar-item" to="/">

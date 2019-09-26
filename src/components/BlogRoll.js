@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql, StaticQuery } from "gatsby";
 import PreviewCompatibleImage from "./PreviewCompatibleImage";
+import { FaBlog } from "react-icons/fa";
 
 class BlogRoll extends React.Component {
   constructor(props){
@@ -60,12 +61,13 @@ class BlogRoll extends React.Component {
             <div className="is-parent column is-6" key={post.id}>
               <div className="card blog-card">
                 <div className="card-content">
+                <FaBlog color={"#f38148"} />
                   <h3>{post.frontmatter.title}</h3>
                   <p>
-                    {post.excerpt.substring(0, 100)}..
+                    {post.excerpt}
                     <div style={{textAlign:'right'}}>
-                      <Link className="button is-primary" to={post.fields.slug}>
-                        Continue Reading
+                      <Link className="blog-btn" to={post.fields.slug}>
+                        VIEW
                       </Link>
                     </div>
                   </p>
@@ -125,10 +127,10 @@ class BlogRoll extends React.Component {
               <div className="card-content">
                 <h3>{post.frontmatter.title}</h3>
                 <p>
-                  {post.excerpt.substring(0, 100)}..
+                  {post.excerpt}
                   <div style={{textAlign:'right'}}>
-                    <Link className="button is-primary" to={post.fields.slug}>
-                      Continue Reading
+                    <Link className="blog-btn" to={post.fields.slug}>
+                      VIEW
                     </Link>
                   </div>
                 </p>
