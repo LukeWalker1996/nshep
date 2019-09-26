@@ -5,7 +5,7 @@ import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
-import { theme } from '../templates/theme';
+import { theme } from "../templates/theme";
 
 export const IndexPageTemplate = ({
   image,
@@ -16,8 +16,7 @@ export const IndexPageTemplate = ({
   description,
   intro
 }) => (
-  <div style={{background: '#f3f3f3'}}>
-    
+  <div style={{ background: "#f3f3f3" }}>
     <div
       className="full-width-image margin-top-0"
       style={{
@@ -26,8 +25,8 @@ export const IndexPageTemplate = ({
         })`,
         backgroundPosition: `top left right bottom`,
         backgroundAttachment: ``,
-        backgroundSize:'cover',
-        backgroundRepeat:'no-repeat'
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat"
       }}
     >
       <div
@@ -39,10 +38,7 @@ export const IndexPageTemplate = ({
           alignItems: "left",
           flexDirection: "column"
         }}
-      >
-
-
-      </div>
+      ></div>
     </div>
     <section
       className="section"
@@ -79,31 +75,23 @@ export const IndexPageTemplate = ({
                     <h3 className="subtitle">{mainpitch.description}</h3>
                   </div>
                 </div>
-                <div className="columns">
+                <div className="columns is-multiline">
                   <div className="column is-12">
                     <h3 className="has-text-weight-semibold is-size-2">
                       {heading}
                     </h3>
                     <p>{description}</p>
                   </div>
-                </div>
-                {/* <Features gridItems={intro.blurbs} /> */}
-                {/* <div className="columns">
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/products">
-                      See all products
-                    </Link>
-                  </div>
-                </div> */}
-                <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    Recent Posts
-                  </h3>
-                  <BlogRoll limit={4} />
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
-                      Read more
-                    </Link>
+                  <div className="column is-12">
+                    <h3 className="has-text-weight-semibold is-size-2">
+                      Recent Posts
+                    </h3>
+                    <BlogRoll limit={4} />
+                    <div className="column is-12 has-text-centered">
+                      <Link className="btn" to="/blog">
+                        Read more
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -175,7 +163,6 @@ export const pageQuery = graphql`
         }
         description
         intro {
-
           heading
           description
         }
