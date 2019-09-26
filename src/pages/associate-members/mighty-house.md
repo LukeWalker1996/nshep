@@ -1,5 +1,5 @@
 ---
-templateKey: member-page
+templateKey: associate-member-page
 title: MIGHTY HOUSE
 description: >-
   Based in Lancaster [www.mightyhouse.co.uk](www.mightyhouse.co.uk)
