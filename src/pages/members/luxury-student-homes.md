@@ -1,6 +1,6 @@
 ---
 templateKey: member-page
-title: Luxury student homes
+title: Luxury student Homes
 description: >-
   Based in Liverpool
   [www.luxurystudenthomes.co.uk](https://www.luxurystudenthomes.co.uk/)
