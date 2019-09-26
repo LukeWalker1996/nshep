@@ -1,5 +1,5 @@
 ---
-templateKey: member-page
+templateKey: associate-member-page
 title: PURPLE FROG GROUP
 description: >-
   Managing property in Birmingham, Bristol and Nottingham:
