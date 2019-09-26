@@ -32,6 +32,17 @@ collections:
       - {label: "Description", name: "description", widget: "markdown"}
       - {label: "Image", name: "image", widget: image}
 
+  - name: "associate-members"
+    label: "Associate Members"
+    folder: "src/pages/associate-members"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "member-page"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "markdown"}
+      - {label: "Image", name: "image", widget: image}
+      
   - name: "pages"
     label: "Pages"
     files:
