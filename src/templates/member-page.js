@@ -19,33 +19,38 @@ export const MemberPageTemplate = ({
   const PostContent = contentComponent || Content;
 
   return (
-    <section className="section">
+    <section style={{ background: "#f3f3f3" }} className="section">
       {helmet || ""}
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <div
-              style={{
-                height: 180,
-                width: 180,
-                marginLeft: "calc(50% - 90px)",
-                marginBottom: 10
-              }}
-            >
-              <PreviewCompatibleImage
-                className="card-image"
-                imageInfo={{
-                  image: image,
-                  alt: `featured image thumbnail for Member ${title}`
-                }}
-              />
+            <div className="card blog-card">
+              <div className="card-content">
+                <div
+                  style={{
+                    height: 180,
+                    width: 180,
+                    marginLeft: "calc(50% - 90px)",
+                    marginBottom: 10
+                  }}
+                >
+                  <PreviewCompatibleImage
+                    className="card-image"
+                    imageInfo={{
+                      image: image,
+                      alt: `featured image thumbnail for Member ${title}`
+                    }}
+                  />
+                </div>
+
+                <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+                  {title}
+                </h1>
+
+                <div dangerouslySetInnerHTML={{ __html: description }} />
+              </div>
             </div>
 
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
-            <div dangerouslySetInnerHTML={{__html: description}} />
             {/* {contentComponent}
             {PostContent}
             <PostContent content={content} /> */}
@@ -66,7 +71,6 @@ MemberPageTemplate.propTypes = {
 
 const MemberPage = ({ data }) => {
   const { markdownRemark: post } = data;
-
 
   return (
     <Layout>

@@ -2,9 +2,9 @@ var proxy = require('http-proxy-middleware')
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: 'National Student Housing Excellence Partnership',
     description:
-      'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
+      'Managing, Developing and Investing in over 15,000 student and co-living bed spaces in the UK. Benchmarking the highest industry standard for student and co-living HMO and Purpose Built accommodation.',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

@@ -47,9 +47,8 @@ export const AssociateMembersPageTemplate = ({
                   <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
                     {title}
                   </h1>
-                  <p>{description}</p>
+
                   <div dangerouslySetInnerHTML={{ __html: description }} />
-                
                 </div>
               </div>
 
@@ -74,7 +73,6 @@ AssociateMembersPageTemplate.propTypes = {
 
 const AssociateMembersPage = ({ data }) => {
   const { markdownRemark: post } = data;
-
 
   return (
     <Layout>
