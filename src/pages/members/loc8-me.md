@@ -12,6 +12,6 @@ description: >-
   and the type of customer service they expect. We take great pride in
   understanding our customers and providing them not only with the highest
   standard of student living, but a friendly and approachable customer service."
-image: /img/loc8me.jpg
+image: /img/loc-8-me.jpg
 ---
 

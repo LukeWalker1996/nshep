@@ -13,6 +13,6 @@ description: >-
   refurbishments and has a pipe line of c300 beds. His ideas and focus are
   driven by student experience to ensure long term sustainable net income and
   robust GDV from the assets that he and Steve invest in.
-image: /img/greg-white.jpg
+image: /img/greg-white.jpeg
 ---
 

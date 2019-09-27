@@ -30,6 +30,6 @@ description: >-
 
 
   Then there is the annual party for our tenants!
-image: /img/carlain-property.jpg
+image: /img/carlain-student-houses.jpg
 ---
 
