@@ -24,7 +24,9 @@ div
 h1 h2 h3 h4 h5 h6 h7
   font-family: 'Manjari', sans-serif!important
 
-
+.section
+   @media screen and (max-width: 768px)
+     padding: 10px!important
 
 
 .contact-form
@@ -47,6 +49,8 @@ h1 h2 h3 h4 h5 h6 h7
     background: $secondary
     border-top-right-radius: 12px
     border-bottom-right-radius: 12px
+    @media screen and (max-width: 768px)
+      display: none!important
     img
       width: 250px
       margin-left: calc(50% - 125px)
@@ -150,9 +154,9 @@ h1 h2 h3 h4 h5 h6 h7
   
   input 
      vertical-align: bottom
-     height: 60px
+     height: 70px
      font-size: 30px
-     margin-left: 32px
+     margin-left: 34px
      border: 0!important
      outline: 0!important
      width: calc(100% - 12px)
