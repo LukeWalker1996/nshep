@@ -26,6 +26,6 @@ description: >-
   protect 'clients' monies. 
 
    Our knowledge and experience of the York student lettings market is second to none. We can therefore give expert advice to landlords on where and what to buy to achieve the best investment.
-image: /img/sinclair-logo.jpg
+image: /img/sinclair-properties.jpg
 ---
 
