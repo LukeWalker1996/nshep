@@ -23,6 +23,6 @@ description: >-
   Walton Robinson’s clients benefit from our expertise in all types of student
   accommodation, in-depth local knowledge, pro-active marketing approach and
   dedication to continually improving our services.
-image: /img/walton-robinson-rouind.png
+image: /img/walton-robinson.jpg
 ---
 
