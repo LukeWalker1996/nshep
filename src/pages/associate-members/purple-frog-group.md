@@ -33,6 +33,6 @@ description: >-
 
   By doing this we make student living easier. We tailor our service to every
   individual, and we strive to be the best, every single day.
-image: /img/purple-frog-logo.png
+image: /img/purple-frog.jpg
 ---
 
