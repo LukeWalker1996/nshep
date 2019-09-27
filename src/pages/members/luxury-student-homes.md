@@ -30,6 +30,6 @@ description: >-
   responding quickly to calls and following up on any issues that need
   resolution. We believe that we offer the best service in the Liverpool
   market!"
-image: /img/luxury-student-homes.jpg
+image: /img/luxuary-student-homes.jpg
 ---
 
