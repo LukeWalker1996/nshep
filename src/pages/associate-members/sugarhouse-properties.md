@@ -15,6 +15,6 @@ description: >-
   shapes and sizes. Our aim is simply to provide the best possible level of
   service and the best possible standard of property for our clients as we seek
   to put responsible landlords in touch with quality tenants.
-image: /img/sougarhouse.png
+image: /img/sugarhouse-properties.jpg
 ---
 
