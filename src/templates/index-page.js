@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 
@@ -6,6 +6,13 @@ import Layout from "../components/Layout";
 import Features from "../components/Features";
 import RecentBlogRoll from "../components/RecentBlogRoll";
 import theme from "../templates/theme";
+
+import Bristol from "../img/hero/bristol.jpg";
+import DurhamBS from "../img/hero/durham-bs.jpeg";
+import DurhamFront from "../img/hero/durham-front.jpg";
+import Liverpool from "../img/hero/liverpool.jpg";
+import York from "../img/hero/york.jpg";
+import Fade from "react-reveal/Fade";
 
 export const IndexPageTemplate = ({
   image,
@@ -15,81 +22,147 @@ export const IndexPageTemplate = ({
   mainpitch,
   description,
   intro
-}) => (
-  <div style={{ background: "#f3f3f3" }}>
-    <div
-      className="full-width-image margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-        backgroundPosition: `top left right bottom`,
-        backgroundAttachment: ``,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        color: 'white'
-      }}
-    >
-      <h2 style={{verticalAlign: 'middle', margin: 0, background: theme.primary, color: 'white', padding: '20px', fontSize: '46px'}}className="title">{mainpitch.title}</h2>
+}) => {
+  const [activeImg, updateActiveImg] = useState(0);
+
+  // kick start off the process
+  useEffect(() => {
+    setTimeout(() => {
+      updateActiveImg(1);
+    }, 5000);
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (activeImg == 4) {
+        updateActiveImg(0);
+      } else {
+        updateActiveImg(activeImg + 1);
+      }
+    }, 5000);
+  }, [activeImg]);
+
+  const imgs = [
+    {
+      id: 1,
+      img: DurhamFront,
+      name: "Durham"
+    },
+
+    {
+      id: 2,
+      img: Bristol,
+      name: "Bristol"
+    },
+    {
+      id: 3,
+      img: Liverpool,
+      name: "Liverpool"
+    },
+    {
+      id: 4,
+      img: York,
+      name: "York"
+    },
+    {
+      id: 5,
+      img: DurhamBS,
+      name: "Durham"
+    }
+  ];
+
+  return (
+    <div style={{ background: "#f3f3f3" }}>
       <div
+        className="full-width-image margin-top-0"
         style={{
-          display: "flex",
-          height: "150px",
-          lineHeight: "1",
-          justifyContent: "space-around",
-          alignItems: "left",
-          flexDirection: "column"
+          // backgroundImage: `url(${
+          //   !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+          // })`,
+          backgroundImage: `url(${imgs[activeImg].img})`,
+          backgroundPosition: `top left right bottom`,
+          backgroundAttachment: ``,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          color: "white",
+          transition: `all 0.5s linear`
         }}
-      ></div>
-    </div>
-    <section
-      className="section"
-      style={{
-        backgroundColor: "#038d9f",
-        color: "white",
-        lineHeight: "1",
-        padding: "0.25em"
-      }}
-    >
-      <div className="container">
-        <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <h3 className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen">
-                {subheading}
-              </h3>
+      >
+        <Fade delay={200}>
+          <h2
+            style={{
+              verticalAlign: "middle",
+              margin: 0,
+              background: theme.primary,
+              color: "white",
+              padding: "20px",
+              fontSize: "46px"
+            }}
+            className="title"
+          >
+            {mainpitch.title}
+          </h2>
+        </Fade>
+        <div
+          style={{
+            display: "flex",
+            height: "150px",
+            lineHeight: "1",
+            justifyContent: "space-around",
+            alignItems: "left",
+            flexDirection: "column"
+          }}
+        ></div>
+      </div>
+      <section
+        className="section"
+        style={{
+          backgroundColor: "#038d9f",
+          color: "white",
+          lineHeight: "1",
+          padding: "0.25em"
+        }}
+      >
+        <div className="container">
+          <div className="section">
+            <div className="columns">
+              <div className="column is-10 is-offset-1">
+                <h3 className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen">
+                  {subheading}
+                </h3>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="content">
+      </section>
+      <section className="section section--gradient">
+        <div className="container">
+          <div className="section">
+            <div className="columns">
+              <div className="column is-10 is-offset-1">
                 <div className="content">
-                  <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
+                  <div className="content">
+                    <div className="tile">
+                      <h3 className="subtitle">{mainpitch.description}</h3>
+                    </div>
                   </div>
-                </div>
-                <div className="columns is-multiline">
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      {heading}
-                    </h3>
-                    <p>{description}</p>
-                  </div>
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      Recent Posts
-                    </h3>
-                    <RecentBlogRoll limit={4} />
-                    <div className="column is-12 has-text-centered">
-                      <Link className="btn" to="/blog">
-                        Read more
-                      </Link>
+                  <div className="columns is-multiline">
+                    <div className="column is-12">
+                      <h3 className="has-text-weight-semibold is-size-2">
+                        {heading}
+                      </h3>
+                      <p>{description}</p>
+                    </div>
+                    <div className="column is-12">
+                      <h3 className="has-text-weight-semibold is-size-2">
+                        Recent Posts
+                      </h3>
+                      <RecentBlogRoll limit={4} />
+                      <div className="column is-12 has-text-centered">
+                        <Link className="btn" to="/blog">
+                          Read more
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -97,10 +170,10 @@ export const IndexPageTemplate = ({
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  </div>
-);
+      </section>
+    </div>
+  );
+};
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
