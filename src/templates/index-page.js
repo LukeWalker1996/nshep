@@ -12,7 +12,10 @@ import DurhamBS from "../img/hero/durham-bs.jpeg";
 import DurhamFront from "../img/hero/durham-front.jpg";
 import Liverpool from "../img/hero/liverpool.jpg";
 import York from "../img/hero/york.jpg";
+import Slide from "react-reveal/Slide";
 import Fade from "react-reveal/Fade";
+
+import LazyLoad from "react-lazyload";
 
 export const IndexPageTemplate = ({
   image,
@@ -24,11 +27,12 @@ export const IndexPageTemplate = ({
   intro
 }) => {
   const [activeImg, updateActiveImg] = useState(0);
-
+  const [beforeImg, updateBeforeImg] = useState(4);
   // kick start off the process
   useEffect(() => {
     setTimeout(() => {
       updateActiveImg(1);
+      updateBeforeImg(0);
     }, 5000);
   }, []);
 
@@ -36,8 +40,12 @@ export const IndexPageTemplate = ({
     setTimeout(() => {
       if (activeImg == 4) {
         updateActiveImg(0);
+        updateBeforeImg(4);
+        return;
       } else {
+        updateBeforeImg(activeImg);
         updateActiveImg(activeImg + 1);
+        return;
       }
     }, 5000);
   }, [activeImg]);
@@ -73,47 +81,74 @@ export const IndexPageTemplate = ({
 
   return (
     <div style={{ background: "#f3f3f3" }}>
-      <div
-        className="full-width-image margin-top-0"
-        style={{
-          // backgroundImage: `url(${
-          //   !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-          // })`,
-          backgroundImage: `url(${imgs[activeImg].img})`,
-          backgroundPosition: `top left right bottom`,
-          backgroundAttachment: ``,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          color: "white",
-          transition: `all 0.5s linear`
-        }}
-      >
-        <Fade delay={200}>
-          <h2
+      <LazyLoad height={400}>
+        <div style={{ position: "relative", height: 400 }}>
+          <div
+            className="full-width-image margin-top-0"
             style={{
-              verticalAlign: "middle",
-              margin: 0,
-              background: theme.primary,
-              color: "white",
-              padding: "20px",
-              fontSize: "46px"
+              backgroundPosition: `top left right bottom`,
+              backgroundAttachment: ``,
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              background: "transparent",
+              position: "absolute",
+              backgroundImage: `url(${imgs[beforeImg].img})`,
+              
             }}
-            className="title"
           >
-            {mainpitch.title}
-          </h2>
-        </Fade>
-        <div
-          style={{
-            display: "flex",
-            height: "150px",
-            lineHeight: "1",
-            justifyContent: "space-around",
-            alignItems: "left",
-            flexDirection: "column"
-          }}
-        ></div>
-      </div>
+            {imgs
+              .filter((v, i) => i == activeImg)
+              .map(i => {
+                return (
+                  <Fade key={i.id}>
+                    <div
+                      className="full-width-image margin-top-0"
+                      style={{
+                        // backgroundImage: `url(${
+                        //   !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+                        // })`,
+                        background: "transparent",
+                        backgroundImage: `url(${i.img})`,
+                        backgroundPosition: `top left right bottom`,
+                        backgroundAttachment: ``,
+                        backgroundSize: "cover",
+                        backgroundRepeat: "no-repeat",
+                        color: "white",
+                        position: "absolute"
+                      }}
+                    >
+                      <h2
+                        style={{
+                          verticalAlign: "middle",
+                          margin: 0,
+                          background: theme.primary,
+                          color: "white",
+                          padding: "20px",
+                          fontSize: "46px"
+                        }}
+                        className="title"
+                      >
+                        {mainpitch.title}
+                      </h2>
+
+                      <div
+                        style={{
+                          display: "flex",
+                          height: "150px",
+                          lineHeight: "1",
+                          justifyContent: "space-around",
+                          alignItems: "left",
+                          flexDirection: "column"
+                        }}
+                      ></div>
+                    </div>
+                  </Fade>
+                );
+              })}
+          </div>
+        </div>
+      </LazyLoad>
+
       <section
         className="section"
         style={{
