@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Smart Property
 date: 2020-02-04T11:00:39.792Z
-description: ...
+description: ' '
 featuredpost: true
 featuredimage: /img/sp-logo-03-1-.jpg
 tags:
