@@ -5,10 +5,10 @@ description: >-
   Based in York 
 
 
-  [Sinclair Properties](www.sinclair-properties.com) is the longest established
-  student Lettings Agency in York. Established in 2000, we have built up an
-  enviable reputation for providing the highest standard student accommodation
-  in York, coupled with an excellent level of service.
+  Sinclair Properties is the longest established student Lettings Agency in
+  York. Established in 2000, we have built up an enviable reputation for
+  providing the highest standard student accommodation in York, coupled with an
+  excellent level of service.
 
 
   We specialise solely in providing the very best accommodation for students and
@@ -26,6 +26,8 @@ description: >-
   protect 'clients' monies. 
 
    Our knowledge and experience of the York student lettings market is second to none. We can therefore give expert advice to landlords on where and what to buy to achieve the best investment.
+
+  https://www.sinclair-properties.com/
 image: /img/sinclair-properties.jpg
 ---
 
