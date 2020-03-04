@@ -2,7 +2,7 @@
 templateKey: member-page
 title: LOC8 ME
 description: >-
-  Based in Loughborough, Hull and Lincoln [www.loc8me.co.uk](www.loc8me.co.uk)
+  Based in Loughborough, Hull and Lincoln 
 
 
   > "Loc8me is a quality student accommodation professional, run by past
@@ -12,6 +12,14 @@ description: >-
   and the type of customer service they expect. We take great pride in
   understanding our customers and providing them not only with the highest
   standard of student living, but a friendly and approachable customer service."
+
+  >
+
+  >
+
+  >
+
+  > [www.loc8me.co.uk](www.loc8me.co.uk)
 image: /img/loc-8-me.jpg
 ---
 
