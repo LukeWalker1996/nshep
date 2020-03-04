@@ -5,12 +5,11 @@ description: >-
   Based in Liverpool 
 
 
-  > All of our [Luxury Student Homes](www.luxurystudenthomes.co.uk) are in
-  excellent locations and in the heart of the action but its the luxury finish
-  which makes our houses stand out from the crowd. All of our homes are pristine
-  and well presented with cool furniture, great kitchens and bathrooms as
-  standard but we go the extra distance and kit the house out with great
-  facilities too.
+  > All of our Luxury Student Homes are in excellent locations and in the heart
+  of the action but its the luxury finish which makes our houses stand out from
+  the crowd. All of our homes are pristine and well presented with cool
+  furniture, great kitchens and bathrooms as standard but we go the extra
+  distance and kit the house out with great facilities too.
 
   >
 
@@ -28,8 +27,15 @@ description: >-
 
   > Once you've moved in to one of our homes we look after our tenants by
   responding quickly to calls and following up on any issues that need
-  resolution. We believe that we offer the best service in the Liverpool
-  market!"
+  resolution. We believe that we offer the best service in the Liverpool market
+
+  >
+
+  >
+
+  >
+
+  > https://www.luxurystudenthomes.co.uk/
 image: /img/luxuary-student-homes.jpg
 ---
 
