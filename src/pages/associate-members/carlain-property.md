@@ -2,13 +2,12 @@
 templateKey: associate-member-page
 title: CARLAIN PROPERTY
 description: >-
-  Based in Cheltenham and Gloucester
-  [www.carlainproperty.co.uk](www.carlainproperty.co.uk)
+  Based in Cheltenham and Gloucester 
 
 
-  Carlain Property® is a family business. We specialise in renting  top quality
-  homes to students.  Our houses are in central locations, conveniently close to
-  college campuses.
+  [Carlain Property](www.carlainproperty.co.uk)® is a family business. We
+  specialise in renting  top quality homes to students.  Our houses are in
+  central locations, conveniently close to college campuses.
 
 
   Tenants' satisfaction in our objective. Often new tenants are introduced by
@@ -25,8 +24,6 @@ description: >-
   of our houses during the summer changeover. An excellent and friendly support
   team provide a rapid response when needed and includes Builders, Locksmith,
   Electrician, Plumber, Gas Engineer and Gardener. 
-
-
 
 
   Then there is the annual party for our tenants!
