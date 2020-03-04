@@ -2,7 +2,7 @@
 templateKey: member-page
 title: Bill Free Homes
 description: >-
-  Based in Durham City [www.billfreehomes.com](www.billfreehomes.com) 
+  Based in Durham City 
 
 
   > We are a multi award-winning student letting agency, based in Durham city
@@ -23,6 +23,14 @@ description: >-
   > Today, we are constantly looking to improve our award winning service to
   become even better, we have keen aim to be innovative and be at the forefront
   of using new technology to improve the experience of our customers.
+
+  >
+
+  >
+
+  >
+
+  > [www.billfreehomes.com](www.billfreehomes.com)
 image: /img/bill-free-homes.jpg
 ---
 
