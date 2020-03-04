@@ -5,8 +5,8 @@ description: >-
   Managing property in Birmingham, Bristol and Nottingham.
 
 
-  Patrick and Greg created [Purple Frog](www.purplefrogproperty.com) in 2007 
-  while they were studying at the University of Birmingham.
+  Patrick and Greg created Purple Frog in 2007  while they were studying at the
+  University of Birmingham.
 
 
   "We were certain we could change student accommodation for the better and
@@ -32,6 +32,11 @@ description: >-
 
   By doing this we make student living easier. We tailor our service to every
   individual, and we strive to be the best, every single day.
+
+
+
+
+  https://www.purplefrogproperty.com/
 image: /img/purple-frog.jpg
 ---
 
