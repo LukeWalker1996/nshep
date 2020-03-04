@@ -2,13 +2,13 @@
 templateKey: associate-member-page
 title: WALTON ROBINSON
 description: >-
-  Based in Newcastle: [www.waltonrobinson.com ](www.waltonrobinson.com)
+  Based in Newcastle
 
 
-  Walton Robinson is an award-winning student lettings and management specialist
-  in Newcastle upon Tyne. The company has been established in Newcastle City
-  Centre since 2001 and has a workforce of over forty staff working closely
-  together in our regional headquarters.
+  [Walton Robinson](www.waltonrobinson.com) is an award-winning student lettings
+  and management specialist in Newcastle upon Tyne. The company has been
+  established in Newcastle City Centre since 2001 and has a workforce of over
+  forty staff working closely together in our regional headquarters.
 
 
   We have a strong team of experienced Propertymark qualified professionals,
