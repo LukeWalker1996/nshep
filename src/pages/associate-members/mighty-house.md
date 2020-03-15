@@ -2,7 +2,7 @@
 templateKey: associate-member-page
 title: MIGHTY HOUSE
 description: >-
-  Based in Lancaster [www.mightyhouse.co.uk](www.mightyhouse.co.uk)
+  Based in Lancaster 
 
 
   Mighty House is owned and run by Chartered Surveyors who are passionate about
@@ -13,6 +13,9 @@ description: >-
   ourselves and bring an exceptional range of skills and experience to the
   business. As a result we offer a range of services and customer service that
   we would want to receive ourselves.
+
+
+  https://www.mightyhouse.co.uk/
 image: /img/mighty-house.jpg
 ---
 

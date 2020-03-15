@@ -2,8 +2,7 @@
 templateKey: associate-member-page
 title: PURPLE FROG GROUP
 description: >-
-  Managing property in Birmingham, Bristol and Nottingham:
-  www.purplefrogproperty.com 
+  Managing property in Birmingham, Bristol and Nottingham.
 
 
   Patrick and Greg created Purple Frog in 2007  while they were studying at the
@@ -33,6 +32,11 @@ description: >-
 
   By doing this we make student living easier. We tailor our service to every
   individual, and we strive to be the best, every single day.
+
+
+
+
+  https://www.purplefrogproperty.com/
 image: /img/purple-frog.jpg
 ---
 

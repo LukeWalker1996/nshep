@@ -2,7 +2,7 @@
 templateKey: associate-member-page
 title: WALTON ROBINSON
 description: >-
-  Based in Newcastle: [www.waltonrobinson.com ](www.waltonrobinson.com)
+  Based in Newcastle
 
 
   Walton Robinson is an award-winning student lettings and management specialist
@@ -23,6 +23,11 @@ description: >-
   Walton Robinson’s clients benefit from our expertise in all types of student
   accommodation, in-depth local knowledge, pro-active marketing approach and
   dedication to continually improving our services.
+
+
+
+
+  https://www.waltonrobinson.com/
 image: /img/walton-robinson.jpg
 ---
 

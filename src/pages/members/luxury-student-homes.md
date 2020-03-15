@@ -2,8 +2,7 @@
 templateKey: member-page
 title: Luxury student Homes
 description: >-
-  Based in Liverpool
-  [www.luxurystudenthomes.co.uk](https://www.luxurystudenthomes.co.uk/)
+  Based in Liverpool 
 
 
   > All of our Luxury Student Homes are in excellent locations and in the heart
@@ -28,8 +27,15 @@ description: >-
 
   > Once you've moved in to one of our homes we look after our tenants by
   responding quickly to calls and following up on any issues that need
-  resolution. We believe that we offer the best service in the Liverpool
-  market!"
+  resolution. We believe that we offer the best service in the Liverpool market
+
+  >
+
+  >
+
+  >
+
+  > https://www.luxurystudenthomes.co.uk/
 image: /img/luxuary-student-homes.jpg
 ---
 

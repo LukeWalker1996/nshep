@@ -2,7 +2,7 @@
 templateKey: member-page
 title: Sinclair Properties
 description: >-
-  Based in York [www.sinclair-properties.com](www.sinclair-properties.com)
+  Based in York 
 
 
   Sinclair Properties is the longest established student Lettings Agency in
@@ -26,6 +26,8 @@ description: >-
   protect 'clients' monies. 
 
    Our knowledge and experience of the York student lettings market is second to none. We can therefore give expert advice to landlords on where and what to buy to achieve the best investment.
+
+  https://www.sinclair-properties.com/
 image: /img/sinclair-properties.jpg
 ---
 

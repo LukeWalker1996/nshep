@@ -2,8 +2,7 @@
 templateKey: associate-member-page
 title: SUGARHOUSE PROPERTIES
 description: >-
-  Based in Headingley, Leeds
-  [www.sugarhouseproperties.co.uk](www.sugarhouseproperties.co.uk)
+  Based in Headingley, Leeds 
 
 
   Sugarhouse Properties is a forward thinking company with fresh ideas and a
@@ -15,6 +14,11 @@ description: >-
   shapes and sizes. Our aim is simply to provide the best possible level of
   service and the best possible standard of property for our clients as we seek
   to put responsible landlords in touch with quality tenants.
+
+
+
+
+  https://www.sugarhouseproperties.co.uk/
 image: /img/sugarhouse-properties.jpg
 ---
 
