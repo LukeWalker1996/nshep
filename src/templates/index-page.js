@@ -12,10 +12,50 @@ import DurhamBS from "../img/hero/durham-bs.jpeg";
 import DurhamFront from "../img/hero/durham-front.jpg";
 import Liverpool from "../img/hero/liverpool.jpg";
 import York from "../img/hero/york.jpg";
-import Slide from "react-reveal/Slide";
-import Fade from "react-reveal/Fade";
 
-import LazyLoad from "react-lazyload";
+import Slider from "react-slick";
+
+const imgs = [
+  {
+    id: 1,
+    img: DurhamFront,
+    name: "Durham"
+  },
+
+  {
+    id: 2,
+    img: Bristol,
+    name: "Bristol"
+  },
+  {
+    id: 3,
+    img: Liverpool,
+    name: "Liverpool"
+  },
+  {
+    id: 4,
+    img: York,
+    name: "York"
+  },
+  {
+    id: 5,
+    img: DurhamBS,
+    name: "Durham"
+  }
+];
+
+const sliderSettings = {
+  dots: false,
+  arrows: false,
+  draggable: false,
+  infinite: true,
+  autoplay: true,
+  speed: 4000,
+  fade: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  infinite: true
+};
 
 export const IndexPageTemplate = ({
   image,
@@ -26,129 +66,74 @@ export const IndexPageTemplate = ({
   description,
   intro
 }) => {
-  const [activeImg, updateActiveImg] = useState(0);
-  const [beforeImg, updateBeforeImg] = useState(4);
-  // kick start off the process
-  useEffect(() => {
-    setTimeout(() => {
-      updateActiveImg(1);
-      updateBeforeImg(0);
-    }, 5000);
-  }, []);
+  const Hero = ({ title }) => {
+    return (
+      <div style={{ position: "relative" }}>
+        <link
+          rel="stylesheet"
+          type="text/css"
+          charset="UTF-8"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+        />
 
-  useEffect(() => {
-    setTimeout(() => {
-      if (activeImg == 4) {
-        updateActiveImg(0);
-        updateBeforeImg(4);
-        return;
-      } else {
-        updateBeforeImg(activeImg);
-        updateActiveImg(activeImg + 1);
-        return;
-      }
-    }, 5000);
-  }, [activeImg]);
-
-  const imgs = [
-    {
-      id: 1,
-      img: DurhamFront,
-      name: "Durham"
-    },
-
-    {
-      id: 2,
-      img: Bristol,
-      name: "Bristol"
-    },
-    {
-      id: 3,
-      img: Liverpool,
-      name: "Liverpool"
-    },
-    {
-      id: 4,
-      img: York,
-      name: "York"
-    },
-    {
-      id: 5,
-      img: DurhamBS,
-      name: "Durham"
-    }
-  ];
+        <Slider {...sliderSettings}>
+          {imgs.map(image => (
+            <div>
+              <img
+                style={{
+                  width: "100%",
+                  objectFit: "cover",
+                  minHeight: "400px"
+                }}
+                src={image.img}
+                alt={image.name}
+              />
+              <div
+                style={{
+                  position: "absolute",
+                  top: "40%",
+                  left: "0",
+                  zIndex: "99",
+                  fontSize: "46px",
+                  color: "#fff",
+                  width: "100%",
+                  textAlign: "center",
+                  display: "flex",
+                  alignContent: "center",
+                  justifyContent: "center"
+                }}
+              >
+                <h1
+                  style={{
+                    verticalAlign: "middle",
+                    margin: 0,
+                    background: theme.primary,
+                    color: "white",
+                    padding: "20px",
+                    fontSize: "46px",
+                    width: "300px"
+                  }}
+                  className="title"
+                >
+                  {title}
+                </h1>
+              </div>
+            </div>
+          ))}
+        </Slider>
+      </div>
+    );
+  };
 
   return (
     <div style={{ background: "#f3f3f3" }}>
-      <LazyLoad height={400}>
-        <div style={{ position: "relative", height: 400 }}>
-          <div
-            className="full-width-image margin-top-0"
-            style={{
-              backgroundPosition: `top left right bottom`,
-              backgroundAttachment: ``,
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-              background: "transparent",
-              position: "absolute",
-              backgroundImage: `url(${imgs[beforeImg].img})`,
-              
-            }}
-          >
-            {imgs
-              .filter((v, i) => i == activeImg)
-              .map(i => {
-                return (
-                  <Fade key={i.id}>
-                    <div
-                      className="full-width-image margin-top-0"
-                      style={{
-                        // backgroundImage: `url(${
-                        //   !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-                        // })`,
-                        background: "transparent",
-                        backgroundImage: `url(${i.img})`,
-                        backgroundPosition: `top left right bottom`,
-                        backgroundAttachment: ``,
-                        backgroundSize: "cover",
-                        backgroundRepeat: "no-repeat",
-                        color: "white",
-                        position: "absolute"
-                      }}
-                    >
-                      <h2
-                        style={{
-                          verticalAlign: "middle",
-                          margin: 0,
-                          background: theme.primary,
-                          color: "white",
-                          padding: "20px",
-                          fontSize: "46px"
-                        }}
-                        className="title"
-                      >
-                        {mainpitch.title}
-                      </h2>
-
-                      <div
-                        style={{
-                          display: "flex",
-                          height: "150px",
-                          lineHeight: "1",
-                          justifyContent: "space-around",
-                          alignItems: "left",
-                          flexDirection: "column"
-                        }}
-                      ></div>
-                    </div>
-                  </Fade>
-                );
-              })}
-          </div>
-        </div>
-      </LazyLoad>
-
+      <Hero title={mainpitch.title} />
+  
       <section
         className="section"
         style={{
